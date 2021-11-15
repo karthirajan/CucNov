@@ -25,16 +25,14 @@ public class MobileSearchSteps extends Commonactions{
 	
 	Commonactions ca = new Commonactions();
 	MobileSearchPage mp = new MobileSearchPage();
-
+	
 	static String input;
 	
 	@Given("user launches flipkart application")
 	public void user_launches_flipkart_application() {
 		
 		
-		ca.launch("https://www.flipkart.com/");
-		
-		
+			
 	    
 	}
 
@@ -43,9 +41,9 @@ public class MobileSearchSteps extends Commonactions{
 		
 		 try {
 			   
-			   mp.getLoginButton();
+			   
 			   mp.getLoginButton().isDisplayed();
-			   Thread.sleep(2000);
+			  
 			   ca.button(mp.getLoginButton());
 			
 	    	} catch (Exception e) {
@@ -58,7 +56,9 @@ public class MobileSearchSteps extends Commonactions{
 	public void user_searching_the_mobile() {
 		
 		   input = "SAMSUNG";
+		   
 		   ca.insertTextAndEnter(mp.getSearchBar(), input);
+		   
 	    
 	}
 
@@ -68,7 +68,8 @@ public class MobileSearchSteps extends Commonactions{
 	public void user_click_on_add_to_cart() {
 		
 		 WebElement mobileName = driver.findElement(By.xpath("(//div[contains(text(),'"+input+"')])[2]"));   
-		   mobileName.click();
+		   
+		 ca.button(mobileName);
 		   
             parentURL = driver.getWindowHandle();
 		   
@@ -82,7 +83,7 @@ public class MobileSearchSteps extends Commonactions{
 			   }   
 		   }
 		   
-		  ca.button(mp.getCartButton());
+		   ca.button(mp.getCartButton());
 		   
 	}
 
@@ -91,13 +92,13 @@ public class MobileSearchSteps extends Commonactions{
 		
 		driver.switchTo().window(parentURL);
 		
-		ca.button(mp.getCartIcon());
+		
 		
 		try {
 			   
 			   
-			   mp.getLoginButton().isDisplayed();
-			   mp.getLoginButton().click();
+			   mp.getCartIcon().isDisplayed();
+			   mp.getCartIcon().click();
 			
 	    	} catch (Exception e) {
 			System.out.println("pop up is not displayed");
@@ -128,6 +129,7 @@ public class MobileSearchSteps extends Commonactions{
 		
 
 		   input = datas.get("Phone1");
+		   
 		   ca.insertTextAndEnter(mp.getSearchBar(), input);
 		
 	}
@@ -137,6 +139,7 @@ public class MobileSearchSteps extends Commonactions{
 		
 		
 		   input = phoneName;
+		   
 		   ca.insertTextAndEnter(mp.getSearchBar(), input);
 		
 	}

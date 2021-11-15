@@ -10,7 +10,7 @@ public class MobileSearchPage extends Commonactions{
 	
 	public MobileSearchPage() {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(Commonactions.driver, this);
 		
 	}
 	
@@ -42,7 +42,6 @@ public class MobileSearchPage extends Commonactions{
 		return cartIcon;
 	}
 	
+	
 
-	
-	
 }
