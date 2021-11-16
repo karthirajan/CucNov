@@ -31,7 +31,7 @@ public class MobileSearchSteps extends Commonactions{
 	@Given("user launches flipkart application")
 	public void user_launches_flipkart_application() {
 		
-		
+	
 			
 	    
 	}

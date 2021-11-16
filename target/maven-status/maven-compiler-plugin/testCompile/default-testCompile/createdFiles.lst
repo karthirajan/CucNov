@@ -1,0 +1,7 @@
+com\flipkart\stepdefinition\TestRunner.class
+com\flipkart\stepdefinition\AamzonSteps.class
+com\flipkart\stepdefinition\Hooks.class
+com\flipkart\objectrepository\AmazonPage.class
+com\flipkart\stepdefinition\MobileSearchSteps.class
+com\flipkart\objectrepository\MobileSearchPage.class
+com\flipkart\resources\Commonactions.class
